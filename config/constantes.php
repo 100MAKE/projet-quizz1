@@ -15,11 +15,11 @@ define("PATH_VIEWS",ROOT."templates".DIRECTORY_SEPARATOR);
 /**
 * Chemin sur data qui contient le fichier Json db.json
 */
-define("PATH_DB",ROOT."data/db.json");
+define("PATH_DB",ROOT."data".DIRECTORY_SEPARATOR."db.json"); 
 /**
 * Chemin sur le dossier public , pour inclusion des images,css et js*/
 define("WEBROOT",str_replace("index.php","",$_SERVER['SCRIPT_NAME']));
 /**
 * Chemin sur l'action des formulaires
 */
-define("PATH_POST","http://localhost:8001");
+define("PATH_POST","http://localhost:8000");

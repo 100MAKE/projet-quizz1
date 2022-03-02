@@ -1,14 +1,14 @@
 {
     "users":[
     {
-    "nom_complet":"Birane Baila Wane",
+    "nom_complet":"sadibou goudiaby",
     "login":"joeur@gmail.com",
     "password":"joeur",
     "role":"ROLE_JOUEUR",
     "score":15
     },
     {
-    "nom_complet":"Aissatou faye",
+    "nom_complet":"SIDY SAMAKE SAMBOU",
     "login":"admin@gmail.com",
     "password":"admin",
     "role":"ROLE_ADMIN",
