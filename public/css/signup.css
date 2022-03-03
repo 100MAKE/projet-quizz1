@@ -1,0 +1,92 @@
+* {
+    box-sizing: border-box;
+}
+
+.form-modal {
+    background-color: #fff;
+    margin: 1% 10% 0% 10%;
+    border-radius: 2%;
+    display: flex;
+}
+
+#modal-title {
+    font-size: 41px;
+    font-weight: bold;
+}
+
+#modal-subtitle {
+    font-size: 21px;
+    color: #292929c4;
+}
+
+.form-modal-header {
+    padding-left: 5%;
+}
+
+.separator {
+    height: 1px;
+    background-color: #808080;
+    border: 1px solid #808080;
+    width: 95%;
+    align-self: flex-start;
+}
+
+.form-part {
+    width: 100%;
+}
+
+.form-wrapper {
+    margin-right: 20%;
+    padding-left: 5%;
+}
+
+.form-control {
+    margin-top: 2%;
+}
+
+label {
+    color: grey;
+}
+
+.form-control input {
+    height: 50px;
+    background-color: lightgray;
+}
+
+.avatar-display {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 5%;
+    margin-right: 5%;
+}
+
+.avatar {
+    vertical-align: middle;
+    width: 210px;
+    height: 210px;
+    border-radius: 50%;
+    border: 3px solid #37b2ff;
+}
+
+.avatar-choice {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.avatar-choice label {
+    width: 100%;
+}
+
+#avatar-choice {
+    padding: 0%;
+    margin: 3% 0% 0% 5%;
+    background-color: #fff;
+}
+
+.submit {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

@@ -1,18 +1,35 @@
 {
-    "users":[
-    {
-    "nom_complet":"sadibou goudiaby",
-    "login":"joeur@gmail.com",
-    "password":"joeur",
-    "role":"ROLE_JOUEUR",
-    "score":15
-    },
-    {
-    "nom_complet":"SIDY SAMAKE SAMBOU",
-    "login":"admin@gmail.com",
-    "password":"admin",
-    "role":"ROLE_ADMIN",
-    "score":0
-    }
+    "users": [
+        {
+            "name": "Admin",
+            "surname": "Admin",
+            "email": "admin@gmail.com",
+            "password": "admin",
+            "role": "ROLE_ADMIN"
+        },
+        {
+            "name": "",
+            "surname": "",
+            "email": "",
+            "password": "",
+            "role": "ROLE_PLAYER",
+            "score": 100
+        },
+        {
+            "name": "",
+            "surname": "",
+            "email": "",
+            "password": "123456",
+            "role": "ROLE_PLAYER",
+            "score": 0
+        },
+        {
+            "name": "",
+            "surname": "",
+            "email": "",
+            "password": "",
+            "role": "ROLE_PLAYER",
+            "score": 0
+        }
     ]
-    }
+}

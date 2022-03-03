@@ -1,3 +1,3 @@
-<script type="text/javascript" src="<?=WEBROOT."js/login.js"?>"></script>
+<script type="text/javascript" src="<?=WEB_ROOT."js/login.js"?>"></script>
 </body>
 </html>

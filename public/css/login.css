@@ -1,0 +1,111 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background: fixed no-repeat url('../images/img-bg.jpg');
+    background-size: 100% 100%;
+    margin: 0%;
+}
+
+.container {
+    display: grid;
+    grid-template-areas:
+        "container-header"
+        "modal-container";
+}
+
+.container-header {
+    grid-area: container-header;
+    display: flex;
+    text-align: center;
+    background-color: #052426;
+}
+
+.container-header img {
+    height: 80px;
+    width: 7%;
+    margin-left: 1%;
+}
+
+.container-header h1 {
+    flex: auto;
+    color: #fff;
+}
+
+.modal-container {
+    grid-area: modal-container;
+    display: flex;
+    flex-direction: column;
+    margin: 5% 30% 0% 30%;
+    background-color: #fff;
+}
+
+.modal-header {
+    background-color: aqua;
+    width: 100%;
+}
+
+.modal-header h3 {
+    margin-left: 2%;
+    color: #fff;
+}
+
+.modal-form-wrapper {
+    flex: auto;
+    width: 100%;
+    margin-top: 1%;
+    padding: 0% 4% 4% 4%;
+}
+
+.form-control {
+    margin-top: 6%;
+    width: 100%;
+}
+
+.form-control input {
+    height: 50px;
+    width: 100%;
+    text-indent: 1%;
+    background-color: #d3d3d3;
+    border: none;
+}
+
+.submit {
+    display: flex;
+    margin-top: 8%;
+}
+
+.submit button {
+    padding: 2.8% 5% 5% 5%;
+    margin-right: 5%;
+    height: 50px;
+    border: none;
+    border-radius: 6%;
+    background-color: #29ffffe3;
+}
+
+.btn {
+    color: #fff;
+    font-weight: bold;
+}
+
+.submit p {
+    flex: auto;
+}
+
+.submit p a {
+    font-weight: bold;
+    text-decoration: none;
+    color: #44444488;
+}
+
+.btn:hover {
+    cursor: pointer;
+}
+
+.hidden {
+    margin-top: 3px;
+    visibility: hidden;
+    color: red;
+}
