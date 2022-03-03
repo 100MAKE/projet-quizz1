@@ -1,16 +1,16 @@
-  <?php
+<?php
 
-//Demarrage de la sesion
-if(session_status()==PHP_SESSION_NONE){
-session_start();
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
 }
-//inclusion des constantes
-require_once dirname(dirname(__FILE__))."/config/constantes.php";
-//inclusion du Validator
-require_once dirname(dirname(__FILE__))."/config/validator.php";
-//
-require_once dirname(dirname(__FILE__))."/config/orm.php";
-//inclusion des roles
-require_once dirname(dirname(__FILE__))."/config/role.php";
-//Chargement du router
-require_once dirname(dirname(__FILE__))."/config/router.php";
+
+// Load files
+require_once dirname(dirname(__FILE__)).DIRECTORY_SEPARATOR."config".DIRECTORY_SEPARATOR . "constantes.php";
+
+require_once dirname(dirname(__FILE__)).DIRECTORY_SEPARATOR."config".DIRECTORY_SEPARATOR . "validator.php";
+
+require_once dirname(dirname(__FILE__)).DIRECTORY_SEPARATOR."config".DIRECTORY_SEPARATOR . "orm.php";
+
+require_once dirname(dirname(__FILE__)).DIRECTORY_SEPARATOR."config".DIRECTORY_SEPARATOR . "role.php";
+
+require_once dirname(dirname(__FILE__)).DIRECTORY_SEPARATOR."config".DIRECTORY_SEPARATOR . "router.php";

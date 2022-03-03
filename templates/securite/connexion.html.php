@@ -1,56 +1,44 @@
-<?php
-require_once(PATH_VIEWS."include/header.html.php");
-if(isset($_SESSION['errors'])){
-$errors=$_SESSION['errors'];unset($_SESSION['errors']);
-}
-?>
-<img class="wave" src="<?=WEBROOT."img/wave.png"?>">
-<div class="container">
-<div class="img">
-<img src="<?=WEBROOT."img/login form.svg"?>">
-</div>
-<div class="login-content">
-<form action="<?=PATH_POST?>" method="post">
-<input type="hidden" name="controller" value="securite">
-<input type="hidden" name="action" value="connexion">
-<img src="img/avatar.svg">
-<h2 class="title">QUIZZ SA</h2>
-<?php if(isset($errors['connexion'])):?>
-<span style="color:red;
-font-size:13px"><?=$errors['connexion']?></span>
-<?php endif ?>
-<div class="input-div one">
-<div class="i">
-<i class="fas fa-user"></i>
-</div>
-<div class="div">
-<h5>Username</h5>
-<input type="text" name="login" class="input">
-</div>
-</div>
-<div>
-<?php if(isset($errors['login'])):?>
-<span style="color:red;margin-left:-200px;
-font-size:13px"><?=$errors['login']?></span>
-<?php endif ?>
-</div>
-<div class="input-div pass">
-<div class="i">
-<i class="fas fa-lock"></i>
-</div>
-<div class="div">
-<h5>Password</h5>
-<input type="password" name="password" class="input">
-</div>
-</div><?php if(isset($errors['password'])):?>
-<span style="color:red;margin-left:-200px;
-font-size:13px"><?=$errors['password']?></span>
-<?php endif ?>
-<button type="submit" class="btn" name="action"
-value="connexion">Connexion</button>
-</form>
-</div>
-</div>
-<?php
-require_once(PATH_VIEWS."include/footer.html.php");
-?>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="<?= PATH_VIEWS. 'styles' . DIRECTORY_SEPARATOR . 'login.css' ?>">
+    <title>Quizz - Signin</title>
+</head>
+
+<body>
+    <div class="container">
+        <?php require_once PATH_VIEWS . 'includes' . DIRECTORY_SEPARATOR . 'container-header.inc.html.php'; ?>
+        <div class="modal-container">
+            <div class="modal-header">
+                <h3>Login</h3>
+            </div>
+            <div class="modal-form-wrapper">
+                <form action="" method="post">
+                    <input type="hidden" name="controller" value="security">
+                    <input type="hidden" name="action" value="login">
+                    <div class="form-control">
+                        <input type="text" name="email" placeholder="Login">
+                        <small class="hidden" id="email-error-msg"></small>
+                    </div>
+                    <div class="form-control">
+                        <input type="password" name="password" placeholder="Password">
+                        <small class="hidden" id="password-error-msg"></small>
+                    </div>
+                    <div class="form-control submit">
+                        <button type="submit" class="btn">Connexion</button>
+                        <p><a href="<?= WEB_ROOT.'?controller=user&action=signup' ?>">S'inscrire pour jouer?</a></p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- <script src="<?= ROOT. 'scripts' . DIRECTORY_SEPARATOR . 'form.validation.js' ?>"></script> -->
+    <script src="<?= WEB_ROOT.'js'.DIRECTORY_SEPARATOR . 'script.js' ?>"></script>
+
+</body>
+
+</html>

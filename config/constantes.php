@@ -2,8 +2,7 @@
 /**
 * Chemin sur dossier racine du projet
 */
-define("ROOT",str_replace("public".DIRECTORY_SEPARATOR."index.php","",$_SERVER['SCR
-IPT_FILENAME']));
+define("ROOT",str_replace("public/index.php","",$_SERVER['SCRIPT_FILENAME']));
 /**
 * Chemin sur dossier src qui contient les controllers et les modeles
 */
@@ -18,7 +17,8 @@ define("PATH_VIEWS",ROOT."templates".DIRECTORY_SEPARATOR);
 define("PATH_DB",ROOT."data".DIRECTORY_SEPARATOR."db.json"); 
 /**
 * Chemin sur le dossier public , pour inclusion des images,css et js*/
-define("WEBROOT",str_replace("index.php","",$_SERVER['SCRIPT_NAME']));
+define("WEB_ROOT","http://localhost/projetQuizz/public/");
+// define("WEB_ROOT",str_replace("index.php","",$_SERVER['SCRIPT_NAME']));
 /**
 * Chemin sur l'action des formulaires
 */
