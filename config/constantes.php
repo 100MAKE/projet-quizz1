@@ -17,9 +17,9 @@ define("PATH_VIEWS",ROOT."templates".DIRECTORY_SEPARATOR);
 define("PATH_DB",ROOT."data".DIRECTORY_SEPARATOR."db.json"); 
 /**
 * Chemin sur le dossier public , pour inclusion des images,css et js*/
-define("WEB_ROOT","http://localhost/projetQuizz/public/");
-// define("WEB_ROOT",str_replace("index.php","",$_SERVER['SCRIPT_NAME']));
+// define("WEB_ROOT","http://localhost/projetQuizz/public/");
+define("WEB_ROOT","http://localhost:8000/");
 /**
 * Chemin sur l'action des formulaires
 */
-define("PATH_POST","http://localhost:8000");
+define("PATH_POST","http://localhost:8000/");

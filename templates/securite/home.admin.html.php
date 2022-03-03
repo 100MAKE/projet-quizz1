@@ -5,8 +5,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="<?= ROOT . 'css' . DIRECTORY_SEPARATOR . 'login.css' ?>">
-    <link rel="stylesheet" href="<?= ROOT. 'css' . DIRECTORY_SEPARATOR . 'home.css' ?>">
+    <link rel="stylesheet" href="<?= WEB_ROOT . 'styles' . DIRECTORY_SEPARATOR . 'login.css' ?>">
+    <link rel="stylesheet" href="<?= WEB_ROOT. 'styles' . DIRECTORY_SEPARATOR . 'home.css' ?>">
+    <link rel="stylesheet" href="<?= WEB_ROOT. 'styles' . DIRECTORY_SEPARATOR . 'sign.css' ?>">
+
     <title>Quizz - Home</title>
 </head>
 
@@ -20,7 +22,7 @@
             </div>
             <div class="admin-profile">
                 <div class="admin-infos">
-                    <img src="<?= WEB_ROOT. 'images'. DIRECTORY_SEPARATOR . 'avatar-img.jpeg' ?>" alt="avatar" class="avatar">
+                    <img src="<?= WEB_ROOT . 'images' . DIRECTORY_SEPARATOR . 'avatar-img.jpeg' ?>" alt="avatar" class="avatar">
                     <div class="name-display">
                         <p id="first-name">Admin</p>
                         <p id="last-name">Admin</p>
@@ -30,7 +32,7 @@
                     <ul>
                         <li>
                             <span>Liste des questions</span>
-                            <img src="<?= WEB_ROOT. 'images' . DIRECTORY_SEPARATOR . 'icons' . DIRECTORY_SEPARATOR . 'ic-liste.png' ?>" alt="">
+                            <img src="<?=WEB_ROOT. 'images' . DIRECTORY_SEPARATOR . 'icons' . DIRECTORY_SEPARATOR . 'ic-liste.png' ?>" alt="">
                         </li>
                         <li>
                             <span>Créer un admin</span>
@@ -38,23 +40,20 @@
                         </li>
                         <li>
                             <span>Liste des joueurs</span>
-                            <img src="<?= WEB_ROOT . 'images' . DIRECTORY_SEPARATOR . 'icons' . DIRECTORY_SEPARATOR . 'ic-liste-active.png' ?>" alt="">
+                            <img src="<?= WEB_ROOT. 'images' . DIRECTORY_SEPARATOR . 'icons' . DIRECTORY_SEPARATOR . 'ic-liste-active.png' ?>" alt="">
                         </li>
                         <li>
                             <span>Créer une question</span>
-                            <img src="<?= WEB_ROOT. 'images' . DIRECTORY_SEPARATOR . 'icons' . DIRECTORY_SEPARATOR . 'ic-ajout.png' ?>" alt="">
+                            <img src="<?= WEB_ROOT . 'images' . DIRECTORY_SEPARATOR . 'icons' . DIRECTORY_SEPARATOR . 'ic-ajout.png' ?>" alt="">
                         </li>
                     </ul>
                 </div>
             </div>
             <div class="player-list">
-                
                 <h3>Liste des joueurs par score</h3>
-               
                 <table>
                     <thead>
                         <tr>
-                            <td >nug</td>
                             <td>Nom</td>
                             <td>Prénom</td>
                             <td>Score</td>
@@ -64,11 +63,9 @@
                         <?php foreach (get_users() as $user) : ?>
                             <?php if ($user['role'] == "ROLE_PLAYER") : ?>
                                 <tr>
-                                    <td> t</td>
                                     <td><?= $user['name'] ?></td>
                                     <td><?= $user['surname'] ?></td>
                                     <td><?= $user['score'] ?></td>
-    <script src="<?= WEB_ROOT. 'scripts' . DIRECTORY_SEPARATOR . 'script.js' ?>"></script>
                                 </tr>
                             <?php endif ?>
                         <?php endforeach ?>

@@ -1,9 +1,17 @@
 <?php
-function find_user_login_password(string $login,string $password):array{
-$users=read_data("users");
-foreach ($users as $user) {
-if( $user['login']==$login && $user['password']==$password)
-return $user;
+
+function find_user_credentials(string $email, string $password): array
+{
+    $users = read_data('users');
+    foreach ($users as $user) {
+        if ($user['email'] == $email && $user['password'] == $password) {
+            return $user;
+        }
+    }
+    return [];
 }
-return [];
+
+function get_users()
+{
+    return read_data('users');
 }

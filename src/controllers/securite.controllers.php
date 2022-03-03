@@ -1,55 +1,78 @@
 <?php
+require_once PATH_SRC . 'models' . DIRECTORY_SEPARATOR . 'user.model.php';
+
+if ($_SERVER['REQUEST_METHOD'] === "POST") {
+    if (isset($_REQUEST['action'])) {
+        if ($_REQUEST['action'] === "login") {
+            // die("hello");
+            $email = $_POST['email'];
+            $password = $_POST['password'];
+            signin_user($email, $password);
+        }
+    }
+}
 
 if ($_SERVER['REQUEST_METHOD'] === "GET") {
     if (isset($_REQUEST['action'])) {
         switch ($_REQUEST['action']) {
-            case "connexion":
-                require_once PATH_VIEWS . 'securite' . DIRECTORY_SEPARATOR . 'connexion.html.php';     
+            case 'login':
+                require_once PATH_VIEWS. 'securite' . DIRECTORY_SEPARATOR . 'login.html.php';
                 break;
-            }
-        } else {
-        require_once PATH_VIEWS . 'securite' . DIRECTORY_SEPARATOR . 'connexion.html.php';     
-        exit();
+
+            case 'home':
+            
+             require_once PATH_VIEWS. 'securite' . DIRECTORY_SEPARATOR .'home.admin.html.php';
+        
+                
+                break;
+            default:
+                require_once PATH_VIEWS. 'securite' . DIRECTORY_SEPARATOR . 'login.html.php';
+                break;
+        }
+    } else {
+        require_once PATH_VIEWS . 'securite' . DIRECTORY_SEPARATOR . 'login.html.php';
     }
 }
+
+function signin_user(string $email, string $password): void
+{
  
-
-
-
-
-
-echo " mont";
-function connexion(string $login,string $password):void {
-    $errors=[];
-    champ_obligatoire("login",$login,$errors);
-    if(!isset($errors['login'])){
-        valid_email("login",$login,$errors);
+    $emailError = "";
+    $passwordError = "";
+    check_email($email, $emailError);
+    if ($emailError != "") {
+        echo $emailError;
     }
-    champ_obligatoire("password",$password,$errors);
-    if(!isset($errors['login'])){
-        valid_password("password",$password,$errors);
+    check_password($password, $passwordError);
+    if ($passwordError != "") {
+        echo $passwordError;
     }
-    if(count($errors)==0){
-        $userConnect=find_user_login_password($login,$password);
-        if(count($userConnect)!=0){
-            $_SESSION[USER_KEY]=$userConnect;
-            header("location:".WEB_ROOT."?controller=user&action=accueil");
+    if ($emailError == "" && $passwordError == "") {
+        $user = find_user_credentials($email, $password);
+        
+        if (count($user) != 0) {
+            $_SESSION['current_user'] = $user;
+            header('location: ' . WEB_ROOT . '?controller=securite&action=home');
             exit();
-        }else{
-            $errors['connexion']="Login ou Mot de passe incorrect";
-            $_SESSION['errors']=$errors;
-            header("location:".WEB_ROOT);
+        } else {
+            $errors['user_error'] = "Email ou mot de passe incorrect";
+            $_SESSION['errors'] = $errors;
+            header('location:' . WEB_ROOT);
             exit();
         }
-    }else{
-        $_SESSION['errors']=$errors;
-        header("location:".WEB_ROOT);
+    } else {
+        $errors = array('email_error' => $emailError, 'password_error' => $passwordError);
+        $_SESSION['error'] = $errors;
+        header('location:' . WEB_ROOT);
         exit();
     }
 }
-function logout():void{
-    $_SESSION['user_connect']=array();
-    unset($_SESSION['user_connect']);
+
+function logout()
+{
     session_destroy();
-    header("location:".WEB_ROOT);
-    exit();}
+    session_unset($_SESSION['current_user']);
+    session_unset($_SESSION['errors']);
+    header('location: ' . WEB_ROOT);
+    exit();
+}

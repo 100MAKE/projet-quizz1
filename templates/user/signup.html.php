@@ -22,7 +22,11 @@
                 </div>
                 <div class="separator"></div>
                 <div class="form-wrapper">
-                    <form action="" method="post">
+                    <form action="<?= WEB_ROOT ?>" method="post">
+                    <input type="hidden" name="controller" value="securite">
+                    <input type="hidden" name="action" value="login">
+
+                    
                         <div class="form-control">
                             <label for="first-name">Prénoms</label>
                             <input type="text" name="firstName" id="first-name" placeholder="Prénoms">

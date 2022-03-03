@@ -8,28 +8,45 @@
             "role": "ROLE_ADMIN"
         },
         {
-            "name": "",
-            "surname": "",
-            "email": "",
-            "password": "",
+            "name": "safietou",
+            "surname": "sow",
+            "email": "safsow@gmail.com",
+            "password": "1222200pmmll",
             "role": "ROLE_PLAYER",
             "score": 100
         },
         {
-            "name": "",
-            "surname": "",
-            "email": "",
+            "name": "amadou",
+            "surname": "diallo",
+            "email": "telli@gmail.com",
             "password": "123456",
             "role": "ROLE_PLAYER",
-            "score": 0
+            "score": 200
         },
         {
-            "name": "",
-            "surname": "",
-            "email": "",
-            "password": "",
+            "name": "amadou",
+            "surname": "diallo",
+            "email": "telli@gmail.com",
+            "password": "123456",
             "role": "ROLE_PLAYER",
-            "score": 0
+            "score": 200
+        },
+        
+        {
+            "name": "amadou",
+            "surname": "diallo",
+            "email": "telli@gmail.com",
+            "password": "123456",
+            "role": "ROLE_PLAYER",
+            "score": 200
+        },
+        {
+            "name": "moustapha",
+            "surname": "faye",
+            "email": "konimoust@gmail.com",
+            "password": "1230yj",
+            "role": "ROLE_PLAYER",
+            "score": 258
         }
     ]
 }
