@@ -18,7 +18,7 @@
         <div class="admin-dashboard">
             <div class="admin-dashboard-header">
                 <h2>CRÉEZ ET PARAMÉTREZ VOS QUIZZ</h2>
-                <button class="btn">Déconnexion</button>
+                <button class="btn">  <a href="<?= WEB_ROOT.'?controller=user&action=deconnexion' ?>">Déconnexion</a>  </button>
             </div>
             <div class="admin-profile">
                 <div class="admin-infos">
@@ -31,20 +31,23 @@
                 <div class="admin-menu">
                     <ul>
                         <li>
-                            <span>Liste des questions</span>
-                            <img src="<?=WEB_ROOT. 'images' . DIRECTORY_SEPARATOR . 'icons' . DIRECTORY_SEPARATOR . 'ic-liste.png' ?>" alt="">
+                            <span>Liste des questions</span> 
+                            <img src="<?=WEB_ROOT. 'images' . DIRECTORY_SEPARATOR . 'Icones' . DIRECTORY_SEPARATOR . 'ic-liste.png' ?>" alt="">
+                              
                         </li>
+
+                        
                         <li>
                             <span>Créer un admin</span>
-                            <img src="<?= WEB_ROOT. 'images' . DIRECTORY_SEPARATOR . 'icons' . DIRECTORY_SEPARATOR . 'ic-ajout.png' ?>" alt="">
+                            <img src="<?= WEB_ROOT. 'images' . DIRECTORY_SEPARATOR . 'Icones' . DIRECTORY_SEPARATOR . 'ic-ajout.png' ?>" alt="">
                         </li>
                         <li>
                             <span>Liste des joueurs</span>
-                            <img src="<?= WEB_ROOT. 'images' . DIRECTORY_SEPARATOR . 'icons' . DIRECTORY_SEPARATOR . 'ic-liste-active.png' ?>" alt="">
+                            <img src="<?= WEB_ROOT. 'images' . DIRECTORY_SEPARATOR . 'Icones' . DIRECTORY_SEPARATOR . 'ic-liste-active.png' ?>" alt="">
                         </li>
                         <li>
                             <span>Créer une question</span>
-                            <img src="<?= WEB_ROOT . 'images' . DIRECTORY_SEPARATOR . 'icons' . DIRECTORY_SEPARATOR . 'ic-ajout.png' ?>" alt="">
+                            <img src="<?= WEB_ROOT . 'images' . DIRECTORY_SEPARATOR . 'Icones' . DIRECTORY_SEPARATOR . 'ic-ajout.png' ?>" alt="">
                         </li>
                     </ul>
                 </div>
@@ -54,20 +57,26 @@
                 <table>
                     <thead>
                         <tr>
+                            <td>rang</td>
                             <td>Nom</td>
                             <td>Prénom</td>
                             <td>Score</td>
                         </tr>
                     </thead>
                     <tbody>
-                        <?php foreach (get_users() as $user) : ?>
-                            <?php if ($user['role'] == "ROLE_PLAYER") : ?>
+                        <?php foreach (get_users() as $key => $user) : ?>
+                        
                                 <tr>
+                                    <td>
+                                        <?=$key?>
+
+                                    </td>
                                     <td><?= $user['name'] ?></td>
                                     <td><?= $user['surname'] ?></td>
                                     <td><?= $user['score'] ?></td>
                                 </tr>
-                            <?php endif ?>
+                                
+                    
                         <?php endforeach ?>
                     </tbody>
                 </table>

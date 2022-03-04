@@ -123,11 +123,11 @@ table {
     margin-left: 5%;
     margin-right: 5%;
     border: 1px solid #5fbbf5;
-    border-radius: 6%;
+    border-radius: 2%;
 }
 
 table td {
-    text-indent: 4%;
+    text-indent: 50%;
 }
 
 thead td {

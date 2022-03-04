@@ -5,8 +5,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="<?= "public/index.php" . 'styles' . DIRECTORY_SEPARATOR . 'login.css' ?>">
-    <link rel="stylesheet" href="<?= "public/index.php" . 'styles' . DIRECTORY_SEPARATOR . 'signup.css' ?>">
+    <link rel="stylesheet" href="<?= WEB_ROOT . 'styles' . DIRECTORY_SEPARATOR . 'login.css' ?>">
+    <link rel="stylesheet" href="<?= WEB_ROOT . 'styles' . DIRECTORY_SEPARATOR . 'signup.css' ?>">
+    <link rel="stylesheet" href="<?=WEB_ROOT. 'styles'.DIRECTORY_SEPARATOR.'home.css' ?>">
     <title>Quizz - Signup</title>
 </head>
 
@@ -22,9 +23,9 @@
                 </div>
                 <div class="separator"></div>
                 <div class="form-wrapper">
-                    <form action="<?= WEB_ROOT ?>" method="post">
+                    <form action="<?= WEB_ROOT.'?controller=securite&action=signup' ?>" method="post">
                     <input type="hidden" name="controller" value="securite">
-                    <input type="hidden" name="action" value="login">
+                    <input type="hidden" name="action" value="signup">
 
                     
                         <div class="form-control">
@@ -33,7 +34,7 @@
                         </div>
                         <div class="form-control">
                             <label for="last-name">Nom</label>
-                            <input type="text" name="LastName" id="last-name" placeholder="Nom">
+                            <input type="text" name="lastName" id="last-name" placeholder="Nom">
                         </div>
                         <div class="form-control">
                             <label for="email">Login</label>
@@ -58,7 +59,7 @@
                 </div>
             </div>
             <div class="avatar-display">
-                <img src="<?= "public/index.php".'images' . DIRECTORY_SEPARATOR . 'avatar-img.png' ?>" alt="" class="avatar">
+                <img src="<?= WEB_ROOT.'images' . DIRECTORY_SEPARATOR . 'avatar-img.jpeg' ?>" alt="" class="avatar">
                 <p>Avatar du joueur</p>
             </div>
         </div>

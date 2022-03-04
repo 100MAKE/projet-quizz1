@@ -54,7 +54,7 @@
                 <table>
                     <thead>
                         <tr>
-                            <td >nug</td>
+                            <td >nhggfttug</td>
                             <td>Nom</td>
                             <td>Prénom</td>
                             <td>Score</td>
@@ -68,7 +68,7 @@
                                     <td><?= $user['name'] ?></td>
                                     <td><?= $user['surname'] ?></td>
                                     <td><?= $user['score'] ?></td>
-    <script src="<?= WEB_ROOT. 'scripts' . DIRECTORY_SEPARATOR . 'script.js' ?>"></script>
+                                    <script src="<?= WEB_ROOT. 'scripts' . DIRECTORY_SEPARATOR . 'script.js' ?>"></script>
                                 </tr>
                             <?php endif ?>
                         <?php endforeach ?>

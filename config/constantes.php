@@ -7,6 +7,7 @@ define("ROOT",str_replace("public/index.php","",$_SERVER['SCRIPT_FILENAME']));
 * Chemin sur dossier src qui contient les controllers et les modeles
 */
 define("PATH_SRC",ROOT."src".DIRECTORY_SEPARATOR);
+define("PATH_PUBLIC",ROOT."public".DIRECTORY_SEPARATOR);
 /**
 * Chemin sur dossier templates du projet
 */

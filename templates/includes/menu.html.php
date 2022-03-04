@@ -1,4 +1,5 @@
-section id="sidebar">
+
+<section id="sidebar">
 <a href="#" class="brand">
 <i class='bx bxs-smile'></i>
 <span class="text">Quizz SA</span>

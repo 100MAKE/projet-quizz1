@@ -16,3 +16,12 @@ function check_email(string $value, string &$error)
         $error = "Password incorrect";
     }
  }
+ function champ_oblig(string $value,string &$error){
+if(empty($value)){
+    $error="champs obligatoire";
+
+}
+
+
+
+ }
